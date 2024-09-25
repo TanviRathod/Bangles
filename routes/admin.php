@@ -28,6 +28,7 @@ Route::group(['middleware' => 'Is_Admin'], function () {
         Route::resource('user', 'UsersController')->except(['create', 'store']);
 
         //        Content Module
+        
         Route::resource('content', 'ContentController')->except(['show', 'create', 'store', 'destroy']);
         Route::get('content/listing', 'ContentController@listing')->name('content.listing');
     });
